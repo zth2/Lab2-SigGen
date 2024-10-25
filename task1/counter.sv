@@ -10,6 +10,6 @@ module counter #(
 
 always_ff @ (posedge clk)
     if(rst) addr <= {WIDTH{1'b0}};
-    else addr <= addr + {{WIDTH-1{1'b0}}, en};
+    else addr <= addr + incr;
 
 endmodule
